@@ -1,6 +1,6 @@
 {
   "name": "@peterycky/strapi-plugin-ckeditor",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "CKEditor 5 custom field for Strapi.",
   "strapi": {
     "name": "ckeditor",
