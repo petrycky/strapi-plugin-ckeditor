@@ -1,10 +1,10 @@
 {
-  "name": "@ckeditor/strapi-plugin-ckeditor",
-  "version": "0.0.7",
+  "name": "@peterycky/strapi-plugin-ckeditor",
+  "version": "0.1.0",
   "description": "CKEditor 5 custom field for Strapi.",
   "strapi": {
     "name": "ckeditor",
-    "description": "The rich text editor for every use case",
+    "description": "The rich text editor for SPECIFIC use case",
     "kind": "plugin",
     "displayName": "CKEditor"
   },
@@ -64,10 +64,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ckeditor/strapi-plugin-ckeditor.git"
+    "url": "https://github.com/petrycky/strapi-plugin-ckeditor"
   },
-  "author": "CKSource (http://cksource.com/)",
-  "homepage": "https://market.strapi.io/plugins/@ckeditor-strapi-plugin-ckeditor",
+  "author": "CKSource (http://cksource.com/) + peterycky",
   "engines": {
     "node": ">=14.19.1 <=18.x.x",
     "npm": ">=6.0.0"
