@@ -97,28 +97,31 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
       window.CKEditor5.wordCount.WordCount,
       StrapiMediaLib,
     ],
-    toolbar: [
-      "undo",
-      "redo",
-      "|",
-      "heading",
-      "|",
-      "bold",
-      "italic",
-      "underline",
-      "strikethrough",
-      "|",
-      "highlight",
-      "|",
-      "blockQuote",
-      "|",
-      "link",
-      "strapiMediaLib",
-      "mediaEmbed",
-      "|",
-      "bulletedList",
-      "numberedList",
-    ],
+    toolbar: {
+      items: [
+        "undo",
+        "redo",
+        "|",
+        "heading",
+        "|",
+        "bold",
+        "italic",
+        "underline",
+        "strikethrough",
+        "|",
+        "highlight",
+        "|",
+        "blockQuote",
+        "|",
+        "link",
+        "strapiMediaLib",
+        "mediaEmbed",
+        "|",
+        "bulletedList",
+        "numberedList",
+      ],
+      shouldNotGroupWhenFull: true,
+    },
     heading: {
       options: [
         {
@@ -167,7 +170,6 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
       default: "",
       toolbar: ["toggleImageCaption", "imageTextAlternative", "|", "linkImage"],
     },
-    shouldNotGroupWhenFull: true,
   },
 
   rich: {
@@ -177,6 +179,7 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
       window.CKEditor5.basicStyles.Italic,
       window.CKEditor5.basicStyles.Underline,
       window.CKEditor5.basicStyles.Strikethrough,
+      window.CKEditor5.highlight.Highlight,
 
       window.CKEditor5.alignment.Alignment,
 
@@ -202,7 +205,6 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
       window.CKEditor5.link.LinkImage,
 
       window.CKEditor5.list.List,
-      window.CKEditor5.list.ListProperties,
 
       window.CKEditor5.htmlEmbed.HtmlEmbed,
       window.CKEditor5.mediaEmbed.MediaEmbed,
@@ -227,7 +229,6 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
         "underline",
         "strikethrough",
         "highlight",
-        "|",
         "alignment",
         "|",
         "superscript",
