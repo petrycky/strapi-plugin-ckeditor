@@ -21,7 +21,6 @@ import ckeditor5PasteFromOfficeDll from "@ckeditor/ckeditor5-paste-from-office/b
 import ckeditor5FindAndReplaceDll from "@ckeditor/ckeditor5-find-and-replace/build/find-and-replace.js";
 import ckeditor5RemoveFormatDll from "@ckeditor/ckeditor5-remove-format/build/remove-format.js";
 import ckeditor5SpecialCharactersDll from "@ckeditor/ckeditor5-special-characters/build/special-characters.js";
-import ckeditor5TableDll from "@ckeditor/ckeditor5-table/build/table.js";
 import ckeditor5WordCountDll from "@ckeditor/ckeditor5-word-count/build/word-count.js";
 import ckeditor5MaximumLengthDll from "@reinmar/ckeditor5-maximum-length/build/maximum-length.js";
 import { StrapiMediaLib } from "./plugins/StrapiMediaLib";
@@ -108,6 +107,7 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
       "italic",
       "underline",
       "strikethrough",
+      "|",
       "highlight",
       "|",
       "blockQuote",
@@ -152,18 +152,22 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
         },
       ],
     },
-    image: {
-      toolbar: [
-        "imageStyle:inline",
-        "imageStyle:block",
-        "imageStyle:side",
-        "|",
-        "toggleImageCaption",
-        "imageTextAlternative",
-        "|",
-        "linkImage",
+    highlight: {
+      options: [
+        {
+          model: "yellowMarker",
+          class: "marker",
+          title: "Marker",
+          color: "#cac407",
+          type: "marker",
+        },
       ],
     },
+    image: {
+      default: "",
+      toolbar: ["toggleImageCaption", "imageTextAlternative", "|", "linkImage"],
+    },
+    shouldNotGroupWhenFull: true,
   },
 
   rich: {
@@ -276,24 +280,19 @@ const CKEDITOR_BASE_CONFIG_FOR_PRESETS = {
         },
       ],
     },
-    list: {
-      properties: {
-        styles: true,
-        startIndex: true,
-        reversed: true,
-      },
+    highlight: {
+      options: [
+        {
+          model: "yellowMarker",
+          class: "marker",
+          title: "Marker",
+          color: "#cac407",
+          type: "marker",
+        },
+      ],
     },
     image: {
-      toolbar: [
-        "imageStyle:inline",
-        "imageStyle:block",
-        "imageStyle:side",
-        "|",
-        "toggleImageCaption",
-        "imageTextAlternative",
-        "|",
-        "linkImage",
-      ],
+      toolbar: ["toggleImageCaption", "imageTextAlternative", "|", "linkImage"],
     },
   },
 };
